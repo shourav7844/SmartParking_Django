@@ -1,0 +1,88 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'signup/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'signup/css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'signup/css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'signup/css/style.css' %}">
+
+    <title>User Sign Up Page</title>
+  </head>
+  <body>
+  
+
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 order-md-2">
+          <img src="{% static 'signup/images/illustration.svg' %}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+                <a class="text-decoration-none"href="{% url 'LandingPage_User' %}"><i class="text-primary fa-solid fa-backward"></i> Back</a>
+
+              <h3>Sign Up for<strong> Registration</strong></h3><i class="text-primary fa-solid fa-user-cowboy"></i>
+              <p class="mb-4">Easy sign up your account to get the full access in the website. You can also register your vehicle in later tabs.</p>
+            </div>
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="form-group first">
+                <label class="ml-2" for="username"></label>
+                {{form.username}}              
+              </div>
+              <div class="form-group first">
+                <label class="ml-2"for="email"></label>
+                {{form.email}}              
+              </div>
+              <div class="form-group last mb-4">
+                <label class="ml-2"for="password1"></label>
+                {{form.password1}}              
+              </div>
+              <div class="form-group last mb-4">
+                <label class="ml-2"for="password2"></label>
+                {{form.password2}}              
+              </div>
+
+              <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
+              {{form.errors}} 
+            </form>
+            <div class="d-flex mt-3 align-items-center">
+              <label class="control  mb-0"><span class="caption">Already have an account?</span>
+              <span class="ml-auto"><a href="{% url 'SignIn_User' %}" class="text-decoration-none text-primary">Login</a></span>
+            </label>
+            </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+    <script src="{% static 'signup/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'signup/js/popper.min.js' %}"></script>
+    <script src="{% static 'signup/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'signup/js/main.js' %}"></script>
+  </body>
+</html>

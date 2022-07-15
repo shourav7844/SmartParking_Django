@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Customer Information</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="{% static 'Customer_Info/img/favicon.ico' %}" rel="icon">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"/>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'Customer_Info/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center pb-1">
+                <div class="col-lg-4">
+                <a class="text-decoration-none"href="{% url 'Dashboard' %}"><i class="text-primary fa-solid fa-backward"></i> Back</a>
+                    <img class="img-thumbnail p-3" src="{% static 'Customer_Info/img/modelT.svg' %}" alt="">
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <small class="bg-primary text-white text-uppercase font-weight-bold px-1">Who You Are</small>
+                    <!-- <h1 class="mt-2 mb-4">Most Effective Creative Service Provider For Companies</h1>
+                    <p class="mb-4">Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea sit dolor duo elitr dolor amet, justo est ipsum amet dolor ut ipsum. Labore diam et nonumy amet dolores. Volup sit labore dolores erat, magna justo sed lorem kasd ea dolor. Labore sit clita invidunt, est dolores lorem sed ipsum kasd no amet ipsum.</p> -->
+                    <div class="row">
+                        <div class="col-md-4 mb-5">
+                            <div class="d-flex">
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Username</h4>
+                                    <p>{{username}}</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5">
+                            <div class="d-flex">
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Vehicle Number</h4>
+                                    <p>{{data}}</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5">
+                            <div class="d-flex">
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Rfid Number</h4>
+                                    <p>{{rfid_no}}</p>
+             
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-5">
+                            <div class="d-flex">
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Description</h4>
+                                    <p>{{description}}</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center border mb-4 mb-lg-0 p-4" style="height: 120px;">
+                        <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Office</h5>
+                            {{office_address}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center border mb-4 mb-lg-0 p-4" style="height: 120px;">
+                        <i class="fa fa-2x fa-envelope-open text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Email</h5>
+                            {{email}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center border mb-4 mb-lg-0 p-4" style="height: 120px;">
+                        <i class="fas fa-2x fa-phone-alt text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Phone No</h5>
+                            {{phone_no}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+</body>
+
+</html>

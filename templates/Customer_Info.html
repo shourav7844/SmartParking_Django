@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Info</title>
+</head>
+<body>
+    <h4>Vehicle number is: {{data}}</h4>
+    <h4>Vehicle rfid no is: {{rfid_no}}</h4>
+    <h4>Vehicle description is: {{description}}</h4>
+    <h4>Vehicle info pic is: </h4>
+    <img src="{{veh_info.veh_info_file.url}}" alt="">
+<a href="{% url 'indexMain' %}">Back</a>
+</body>
+</html>

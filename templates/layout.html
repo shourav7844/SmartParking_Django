@@ -1,0 +1,254 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout</title>
+        <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/sb-admin-2.min.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/extra.css' %}" >
+    
+    
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+    </head>
+    <body>
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav text-left">
+                        <a href="{% url 'UserProfile' %}" class="btn btn-dark py-md-2 px-md-4 font-weight-semi-bold mt-2">Back</a>
+                    </ul>
+
+                    <!-- <ul class="navbar-nav ml-auto">
+                        <a href="{% url 'logoutUser' %}" class="btn btn-dark py-md-2 px-md-4 font-weight-semi-bold mt-2">Logout</a>
+                    </ul> -->
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Layout</h1>
+                    </div>
+
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Parking Area Overview</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <!-- <canvas id="myAreaChart"></canvas> -->
+                                        <!-- layout -->
+                                        <div class="card-body">
+                                            <!-- main -->
+                                            <!-- 1st row of vehicle -->
+                                            <div class="row my-5">
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> Slot 1:</u><h3 id="Slot1"></h3></h4>
+                                                    </div>
+                                                    <img id="myImage1" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> Slot 2:</u><h3 id="Slot2"></h3></h4>
+                                                    </div>
+                                                    <img id="myImage2" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> Slot 3:</u><h3 id="Slot3"></h3></h4>
+                                                    </div>
+                                                    <img id="myImage3" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> Slot 4:</u><h3 id="Slot4"></h3></h4>   
+                                                    </div>
+                                                    <img id="myImage4" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> A5:</u><h3 id="Slot4"></h3></h4>   
+                                                    </div>
+                                                    <img id="myImage5" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> A6:</u><h3 id="Slot4"></h3></h4>  
+                                                    </div> 
+                                                    <img id="myImage6" src="../static/img/white.jpg" alt=""><br>
+                                                </div>                                                                                                
+                                            </div>
+                                            <!-- 2nd row of vehicle -->
+                                            <div class="row my-5">
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> B1:</u><h3 id="Slot1"></h3></h4>
+                                                    </div>
+                                                    <img id="myImage1" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> B2:</u><h3 id="Slot2"></h3></h4>
+                                                    </div>
+                                                    <img id="myImage2" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> B3:</u><h3 id="Slot3"></h3></h4>
+                                                    </div>
+                                                    <img id="myImage3" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> B4:</u><h3 id="Slot4"></h3></h4>   
+                                                    </div>
+                                                    <img id="myImage4" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> B5:</u><h3 id="Slot4"></h3></h4>   
+                                                    </div>
+                                                    <img id="myImage5" src="../static/img/white.jpg" alt=""><br>
+                                                </div>
+                                                <div class="col-xl-2 mb-2">
+                                                    <div class="pb-3 px-3">
+                                                        <h4> <u> B6:</u><h3 id="Slot4"></h3></h4>  
+                                                    </div> 
+                                                    <img id="myImage6" src="../static/img/white.jpg" alt=""><br>
+                                                </div>                                                                                                
+                                            </div>
+
+                                        </div>                                          
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- layout -->
+                <!-- <div>
+                    <p>Status</p>
+                    
+                    <h4> <u> Slot1:</u><h3 id="Slot1"></h3></h4>
+                    <img id="myImage1" src="../static/img/white.jpg" alt=""><br>
+                    <h4> <u> Slot2:</u><h3 id="Slot2"></h3></h4>
+                    <img id="myImage2" src="../static/img/white.jpg" alt=""><br>
+
+                    <h4> <u> Slot3:</u><h3 id="Slot3"></h3></h4>
+                    <img id="myImage3" src="../static/img/white.jpg" alt=""><br>
+
+                    <h4> <u> Slot4:</u><h3 id="Slot4"></h3></h4>   
+                    <img id="myImage4" src="../static/img/white.jpg" alt=""><br>
+                </div> -->
+    </body>
+</html>
+
+
+<script>
+let status;
+//Slot_1 free or occupied
+    var dataSlot1 = JSON.parse("{{slot1|escapejs}}");
+    if(dataSlot1 == false){
+        status = "Free";
+    } else if(dataSlot1 == true){
+        status = "occupied";
+    } else{
+        status = "unknown"
+    }
+    // document.getElementById("Slot1").innerHTML = status;
+    if(status == "occupied"){
+        document.getElementById("myImage1").src="../static/img/redCarA.jpg";
+    }
+    else{
+        document.getElementById("myImage1").src="../static/img/white.jpg";
+    }
+
+    
+
+
+//Slot_2 free or occupied
+var dataSlot2 = JSON.parse("{{slot2|escapejs}}");
+    if(dataSlot2 == false){
+        status = "Free";
+    } else if(dataSlot2 == true){
+        status = "occupied";
+    } else{
+        status = "unknown"
+    }
+    // document.getElementById("myImage2").innerHTML = status;
+    if(status == "occupied"){
+        document.getElementById("myImage2").src="../static/img/redCarA.jpg";
+    }
+    else{
+        document.getElementById("myImage2").src="../static/img/white.jpg";
+    }
+
+//Slot_3 free or occupied
+var dataSlot3 = JSON.parse("{{slot3|escapejs}}");
+    if(dataSlot3 == false){
+        status = "Free";
+    } else if(dataSlot3 == true){
+        status = "occupied";
+    } else{
+        status = "unknown"
+    }
+    // ocument.getElementById("Slot3").innerHTML = status;
+    if(status == "occupied"){
+        document.getElementById("myImage3").src="../static/img/redCarA.jpg";
+    }
+    else{
+        document.getElementById("myImage3").src="../static/img/white.jpg";
+    }
+
+
+//Slot_4 free or occupied
+var dataSlot4 = JSON.parse("{{slot4|escapejs}}");
+    if(dataSlot4 == false){
+        status = "Free";
+    } else if(dataSlot4 == true){
+        status = "occupied";
+    } else{
+        status = "unknown"
+    }
+    // document.getElementById("Slot4").innerHTML = status;
+    if(status == "occupied"){
+        document.getElementById("myImage4").src="../static/img/redCarA.jpg";
+    }
+    else{
+        document.getElementById("myImage4").src="../static/img/white.jpg";
+    }
+// practise
+    // let slotElements = document.getElementById("slot")
+    // for (var x in data){
+    //     if(x == true){
+    //         status = "occupied";
+    //     }
+    //     else{
+    //         status = "free";
+    //     }
+        
+            
+    //     document.getElementById("Slot").innerHTML = status;
+    // }
+</script>

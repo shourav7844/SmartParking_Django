@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DotCom - Creative Agency Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous"/>
+ 
+    <!-- Favicon -->
+    <link href="{% static 'vehicle_register_final/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'vehicle_register_final/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <a class="text-decoration-none"href="{% url 'UserProfile' %}"><i class="text-primary fa-solid fa-backward"></i> Back</a>
+            <div class="text-center">
+                <small class="bg-primary text-white text-uppercase font-weight-bold text-center px-1">Get In Touch</small>
+                <h1 class="mt-2 mb-5">Update User-Vehicle Information</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <form method="POST" action="" name="sentMessage" id="contactForm" novalidate="novalidate">
+                        {% csrf_token %}
+                    <div class="d-flex align-items-center border mb-3 p-4">
+                        <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Our Office</h5>
+                            {{form.office_address}}
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border mb-3 p-4">
+                        <i class="fa fa-2x fa-envelope-open text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Email Us</h5>
+                            {{form.email}}
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border mb-3 mb-md-0 p-4">
+                        <i class="fas fa-2x fa-phone-alt text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Call Us</h5>
+                            {{form.phone_no}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        <!-- <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> -->
+                                        <h4 class="font-weight-bold mb-3">Username</h4>
+                                        {{form.username}}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        <h4 class="font-weight-bold mb-3">Vehicle Number</h4>
+                                        {{form.veh_number}}
+                                        <!-- <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> -->
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <h4 class="font-weight-bold mb-3">Rfid Card Number</h4>
+                                {{form.rfid_no}}
+                                <!-- <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" /> -->
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <h4 class="font-weight-bold mb-3">Any Description</h4>
+                                {{form.description}}
+                                <!-- <textarea class="form-control" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea> -->
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <h4 class="font-weight-bold mb-3">Upload vehicle information file</h4>
+                                {{form.veh_info_file}}
+                                <!-- <textarea class="form-control" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea> -->
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px;" type="submit" id="sendMessageButton">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+</body>
+
+</html>

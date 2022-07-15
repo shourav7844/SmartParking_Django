@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+<head>
+    <title>Manual Input Out Form</title>
+    <link rel="stylesheet" href="{% static 'loginAdmin.css' %}">
+</head>
+<body>
+
+    <!-- {% if messages %}
+    {% for message in messages %}
+    <strong {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</strong>
+    {% endfor %}
+    {% endif %} -->
+    {% include 'messages.html' %}
+
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" action="{% url 'ManualExit' %}" method = "POST">
+                    {% csrf_token %}
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Vehicle Number:" id="veh_number" name="veh_number" required>
+                    </div>
+                    <!-- <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password:" id="password" name="PASSWORD" required>
+                    </div> -->
+                    <button class="button login__submit" type="submit">
+                        <span class="button__text">Enter</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <div class="social-login">
+                    <h3>Manual Exit Input</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+</head>
+<body>
+    <form action="" method = "post">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p>{{error}}</p>
+            {% endfor %}
+        {% endif %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br> <br>
+        {% endfor %}
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html> -->
